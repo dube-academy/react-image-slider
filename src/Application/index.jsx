@@ -2,26 +2,34 @@ import React from "react";
 import styled from "styled-components";
 
 import GlobalStyles from "./GlobalStyles";
-import pic from "../assets/flower3-1600.jpg";
 
-const Heading = styled.h1`
-  color: green;
-`;
+import ImageSlider from "../components/ImageSlider";
+
+import image1 from "../assets/slide_1.jpeg";
+import image2 from "../assets/slide_2.jpeg";
+import image3 from "../assets/slide_3.jpeg";
+import image4 from "../assets/slide_4.jpeg";
+import image5 from "../assets/slide_5.jpeg";
+import image6 from "../assets/slide_6.jpeg";
 
 const Application = () => {
   return (
     <>
       <GlobalStyles />
       <div>
-        <Heading>Hello from the Dubé React App Starter Template</Heading>
-        <p>
-          Donec sed odio dui. Morbi leo risus, porta ac consectetur ac,
-          vestibulum at eros. Donec sed odio dui. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Curabitur blandit tempus porttitor. Fusce
-          dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-          fermentum massa justo sit amet risus.
-        </p>
-        <img src={pic} alt="" style={{ maxWidth: "100%" }} />
+        <ImageSlider images={[image1, image2, image3, image4, image5, image6]}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              color: "#fff",
+            }}
+          >
+            <h1>React.js Image Slider</h1>
+            <p>Nulla vitae elit libero, a pharetra augue.</p>
+          </div>
+        </ImageSlider>
       </div>
     </>
   );
